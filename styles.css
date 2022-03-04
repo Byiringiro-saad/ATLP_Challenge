@@ -3,6 +3,7 @@
 :root {
   --blue: #0f2d55;
   --black: #000000;
+  --gray: #d5d6d5;
   --white: #ffffff;
 }
 
@@ -27,9 +28,24 @@ a {
   color: var(--black);
 }
 
+.blue {
+  width: 24%;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background: var(--blue);
+}
+
+.blue p {
+  color: var(--white);
+  font-weight: 600;
+}
+
 .container {
   width: 1000px;
-  height: 700px;
+  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -48,13 +64,7 @@ a {
   justify-content: space-around;
 }
 
-.blue {
-  width: 24%;
-  height: 100%;
-  background: var(--blue);
-}
-
-.content {
+.container .profile .content {
   width: 76%;
   height: 100%;
   display: flex;
@@ -64,33 +74,34 @@ a {
   padding: 20px;
 }
 
-.profile .title {
+.container .profile .content .title {
   color: var(--blue);
 }
 
-.profile .title h2 {
+.container .profile .content .title h2 {
+  font-weight: 900;
+}
+
+.container .profile .content .title p {
   font-weight: 800;
+  font-size: 1.2em;
 }
 
-.profile .title {
-  font-weight: 600;
-}
-
-.profile .contacts {
+.container .profile .content .contacts {
   width: 70%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.profile .contacts .contact {
+.container .profile .content .contacts .contact {
   width: 100%;
   height: 30px;
   display: flex;
   align-items: center;
 }
 
-.profile .contacts .contact i {
+.container .profile .content .contacts .contact i {
   font-size: 0.7em;
   width: 25px;
   height: 25px;
@@ -102,10 +113,597 @@ a {
   background: var(--blue);
 }
 
-.profile .contacts .contact a {
+.container .profile .content .contacts .contact a {
   margin: 0 5px;
 }
 
-.profile .description p span {
+.container .profile .content .description p span {
   font-weight: 700;
+}
+
+.container .experience {
+  width: 100%;
+  height: 350px;
+}
+
+.container .experience .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .experience .title .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .experience .title .lines i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 1em;
+  border-radius: 50%;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+}
+
+.container .experience .title .lines .line {
+  width: 2px;
+  height: 30%;
+  background: var(--blue);
+}
+
+.container .experience .content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container .experience .title .content p {
+  margin: 9px 0;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.container .experience > ul {
+  width: 100%;
+  height: 300px;
+}
+
+.container .experience > ul > li {
+  width: 100%;
+  height: 150px;
+  display: flex;
+}
+
+.container .experience > ul > li .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .experience > ul > li .lines .small {
+  width: 2px;
+  height: 3%;
+  background: var(--blue);
+}
+
+.container .experience > ul > li .lines .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.container .experience > ul > li .lines .line {
+  width: 2px;
+  height: 95%;
+  background: var(--blue);
+}
+
+.container .experience > ul > li .list .sub-title {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container .experience > ul > li .list p {
+  font-style: italic;
+}
+
+.container .education {
+  width: 100%;
+  height: 150px;
+}
+
+.container .education .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.container .education .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .education .title .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .education .title .lines i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 1em;
+  border-radius: 50%;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+}
+
+.container .education .title .lines .line {
+  width: 2px;
+  height: 40%;
+  background: var(--blue);
+}
+
+.container .education .content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container .education .title .content p {
+  margin: 4px 0;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.container .education > ul {
+  width: 100%;
+  height: 300px;
+}
+
+.container .education > ul > li {
+  width: 100%;
+  height: 150px;
+  display: flex;
+}
+
+.container .education > ul > li .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .education > ul > li .lines .small {
+  width: 2px;
+  height: 3%;
+  background: var(--blue);
+}
+
+.container .education > ul > li .lines .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.container .education > ul > li .lines .line {
+  width: 2px;
+  height: 95%;
+  background: var(--blue);
+}
+
+.container .education > ul > li .list .sub-title {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container .education > ul > li .list p {
+  font-style: italic;
+}
+
+.container .skills {
+  width: 100%;
+  height: 150px;
+}
+
+.container .skills .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .skills .title .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .skills .title .lines i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 1em;
+  border-radius: 50%;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+}
+
+.container .skills .title .lines .line {
+  width: 2px;
+  height: 30%;
+  background: var(--blue);
+}
+
+.container .skills .content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container .skills .title .content p {
+  margin: 9px 0;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.container .skills > ul {
+  width: 100%;
+  height: 300px;
+}
+
+.container .skills > ul > li {
+  width: 100%;
+  height: 25px;
+  display: flex;
+}
+
+.container .skills > ul > li .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .skills > ul > li .lines .small {
+  width: 2px;
+  height: 20%;
+  background: var(--blue);
+}
+
+.container .skills > ul > li .lines .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.container .skills > ul > li .lines .line {
+  width: 2px;
+  height: 50%;
+  background: var(--blue);
+}
+
+.container .skills > ul > li p span {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container .gap {
+  width: 100%;
+  height: 10px;
+  display: flex;
+}
+
+.container .gap .lines {
+  width: 6%;
+  height: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .gap .lines .line {
+  width: 2px;
+  height: 100%;
+  background: var(--blue);
+}
+
+.container .gap .content {
+  width: 70%;
+  height: 100%;
+}
+
+.container .software {
+  width: 100%;
+  height: 150px;
+}
+
+.container .software .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .software .title .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .software .title .lines i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 1em;
+  border-radius: 50%;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+}
+
+.container .software .title .lines .line {
+  width: 2px;
+  height: 30%;
+  background: var(--blue);
+}
+
+.container .software .content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container .software .title .content p {
+  margin: 9px 0;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.container .software > ul {
+  width: 100%;
+  height: 300px;
+}
+
+.container .software > ul > li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.container .software > ul > li .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .software > ul > li .lines .small {
+  width: 2px;
+  height: 12%;
+  background: var(--blue);
+}
+
+.container .software > ul > li .lines .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.container .software > ul > li .lines .line {
+  width: 2px;
+  height: 78%;
+  background: var(--blue);
+}
+
+.container .software > ul > li .item {
+  width: 70%;
+  height: 40px;
+  padding: 0 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.container .software > ul > li .item .levels {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+.container .software > ul > li .item .levels .dots {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .software > ul > li .item .levels .dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.container .software > ul > li .item .levels .dots .full {
+  background: var(--blue);
+}
+
+.container .software > ul > li .item .levels .dots .blank {
+  background: var(--gray);
+}
+
+.container .certifications {
+  width: 100%;
+  height: 100px;
+}
+
+.container .certifications .title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .certifications .title .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .certifications .title .lines i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  font-size: 1em;
+  border-radius: 50%;
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+}
+
+.container .certifications .title .lines .line {
+  width: 2px;
+  height: 30%;
+  background: var(--blue);
+}
+
+.container .certifications .content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.container .certifications .title .content p {
+  margin: 9px 0;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+
+.container .certifications > ul {
+  width: 100%;
+  height: 300px;
+}
+
+.container .certifications > ul > li {
+  width: 100%;
+  height: 25px;
+  display: flex;
+}
+
+.container .certifications > ul > li .lines {
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container .certifications > ul > li .lines .small {
+  width: 2px;
+  height: 20%;
+  background: var(--blue);
+}
+
+.container .certifications > ul > li .lines .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.container .certifications > ul > li .lines .line {
+  width: 2px;
+  height: 50%;
+  background: var(--blue);
+}
+
+.container .certifications > ul > li p span {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container .end {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.container .end .content {
+  width: 70%;
+  height: 100%;
 }
